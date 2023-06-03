@@ -1,7 +1,7 @@
 #----------------------
 import pyodbc
 from flask import jsonify
-conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=DESKTOP-ETC7CAN;DATABASE=Vacunas;Trusted_Connection=yes')
+conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=Vacunas;Trusted_Connection=yes')
 cursor = conn.cursor()
 
 def get_usuarios():
