@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Usuarios</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Usuarios</h1>
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>DNI</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+        <th>First Last Name</th>
+        <th>Second Last Name</th>
+        <th>Género</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Birth Date</th>
+        <th>Password</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usuario in usuarios %}
+      <tr>
+        <td>{{ usuario.id_user }}</td>
+        <td>{{ usuario.dni }}</td>
+        <td>{{ usuario.firstName }}</td>
+        <td>{{ usuario.secondName }}</td>
+        <td>{{ usuario.firstLastName }}</td>
+        <td>{{ usuario.secondLastName }}</td>
+        <td>{{ usuario.genero }}</td>
+        <td>{{ usuario.mail }}</td>
+        <td>{{ usuario.phone }}</td>
+        <td>{{ usuario.birthDate }}</td>
+        <td>{{ usuario.password }}</td>
+        <td>{{ usuario.id_Tipo }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

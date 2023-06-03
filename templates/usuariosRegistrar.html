@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nuevo Registro</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nuevo Registro</h1>
+  <form action="/guardar_usuario" method="POST">
+    <label for="id_user">ID:</label>
+    <input type="text" id="id_user" name="id_user" value="{{ next_id }}" readonly><br><br>
+    <div class="form-group">
+      <label for="dni">DNI:</label>
+      <input type="text" class="form-control" id="dni" name="dni" required>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="secondName">Second Name:</label>
+      <input type="text" class="form-control" id="secondName" name="secondName">
+    </div>
+    <div class="form-group">
+      <label for="firstLastName">First Last Name:</label>
+      <input type="text" class="form-control" id="firstLastName" name="firstLastName" required>
+    </div>
+    <div class="form-group">
+      <label for="secondLastName">Second Last Name:</label>
+      <input type="text" class="form-control" id="secondLastName" name="secondLastName" required>
+    </div>
+    <div class="form-group">
+      <label for="genero">Género:</label>
+      <select class="form-control" id="genero" name="genero" required>
+        <option value="1">Masculino</option>
+        <option value="0">Femenino</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="mail">Email:</label>
+      <input type="email" class="form-control" id="mail" name="mail" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" class="form-control" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="birthDate">Birth Date:</label>
+      <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="form-group">
+      <label for="id_Tipo">Tipo:</label>
+      <select class="form-control" id="id_Tipo" name="id_Tipo" required>
+        <option value="1">Paciente</option>
+        <option value="2">Enfermero/a</option>
+        <option value="3">Personal de registro</option>
+        <option value="4">Administrativo de Salud</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</body>
+</html>
