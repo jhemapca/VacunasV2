@@ -15,7 +15,7 @@ def usuarios():
     return render_template('usuariosMostrar.html', usuarios=usuarios)
 
 @app.route('/personalRegistro')
-def formNuevoReg():
+def personalRegistro():
     return render_template('personalRegistro.html')
 
 @app.route('/login')
@@ -23,43 +23,39 @@ def login():
     return render_template('login.html')
 
 @app.route('/inicio')
-def login():
+def inicio():
     return render_template('inicio.html')
 
 @app.route('/contactenos')
-def login():
+def contactenos():
     return render_template('contactenos.html')
 
 @app.route('/administrativoSalud')
-def login():
+def administrativoSalud():
     return render_template('administrativoSalud.html')
 
 @app.route('/dosisVacunacion')
-def login():
+def dosisVacunacion():
     return render_template('dosisVacunacion.html')
 
 @app.route('/enfermero01')
-def login():
+def enfermero01():
     return render_template('enfermero01.html')
 
 @app.route('/nuevoReporte')
-def login():
+def nuevoReporte():
     return render_template('nuevoReporte.html')
 
-@app.route('/personalRegistro')
-def login():
-    return render_template('personalRegistro.html')
-
 @app.route('/registroVacuVisual')
-def login():
+def registroVacuVisual():
     return render_template('registroVacuVisual.html')
 
 @app.route('/turnosEnfermeros')
-def login():
+def turnosEnfermeros():
     return render_template('turnosEnfermeros.html')
 
 @app.route('/usuario01')
-def login():
+def usuario01():
     return render_template('usuario01.html')
 
 @app.route('/guardar_usuario', methods=['POST'])
