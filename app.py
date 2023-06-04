@@ -14,9 +14,53 @@ def usuarios():
     usuarios = sql.get_usuarios()
     return render_template('usuariosMostrar.html', usuarios=usuarios)
 
-@app.route('/formNuevoReg')
+@app.route('/personalRegistro')
 def formNuevoReg():
-    return render_template('usuariosRegistrar.html')
+    return render_template('personalRegistro.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/inicio')
+def login():
+    return render_template('inicio.html')
+
+@app.route('/contactenos')
+def login():
+    return render_template('contactenos.html')
+
+@app.route('/administrativoSalud')
+def login():
+    return render_template('administrativoSalud.html')
+
+@app.route('/dosisVacunacion')
+def login():
+    return render_template('dosisVacunacion.html')
+
+@app.route('/enfermero01')
+def login():
+    return render_template('enfermero01.html')
+
+@app.route('/nuevoReporte')
+def login():
+    return render_template('nuevoReporte.html')
+
+@app.route('/personalRegistro')
+def login():
+    return render_template('personalRegistro.html')
+
+@app.route('/registroVacuVisual')
+def login():
+    return render_template('registroVacuVisual.html')
+
+@app.route('/turnosEnfermeros')
+def login():
+    return render_template('turnosEnfermeros.html')
+
+@app.route('/usuario01')
+def login():
+    return render_template('usuario01.html')
 
 @app.route('/guardar_usuario', methods=['POST'])
 def guardar_usuario():
@@ -37,7 +81,7 @@ def guardar_usuario():
         'id_Tipo': request.form['id_Tipo']
     }
     sql.guardar_usuario(usuario)
-    return "Nuevo usuario"
+    return render_template('personalRegistro.html')
 
 @app.route('/usuarios/<int:id>', methods=['GET', 'PUT'])
 def editar_usuario(id):

@@ -29,16 +29,16 @@
         <div class="respmenu" style="display: flex; flex-direction: row;
          height: 150px; justify-content: space-evenly; align-items: center;">
             <div class="logo-header" style="width: 10%; height: 80%;">
-                <a href="index.html"></a><img src="imagenes/logo.png" alt="logo de la comunidad gamer" style="height: 100%; width: 100%;"></a>
+                <a href="http://127.0.0.1:5000/index"></a><img src="https://amv.org.mx/wp-content/uploads/2020/12/jeringuilla1.png" alt="logo de la comunidad gamer" style="height: 100%; width: 100%;"></a>
             </div>
             <nav class="nav-menu" style="width: 65%;">
                 <ul style="list-style-type: none; display: flex;
                  justify-content: space-evenly; align-items: center; 
                  flex-direction: row; flex-wrap: nowrap; font-size: 3vw;
                  font-family: 'Roboto Mono', cursive;">
-                    <li id="nav"><a href="inicio.html" id="textoNav" style="text-decoration: none; color: black;">Inicio</a></li>
-                    <li id="nav"><a href="login.html" id="textoNav" style="text-decoration: none; color: black;"> Log In</a></li>
-                    <li id="nav"><a href="contactenos.html" id="textoNav" style="text-decoration: none; color: black;"> Contáctenos</a> </li>
+                    <li id="nav"><a href="http://127.0.0.1:5000/inicio" id="textoNav" style="text-decoration: none; color: black;">Inicio</a></li>
+                    <li id="nav"><a href="http://127.0.0.1:5000/login" id="textoNav" style="text-decoration: none; color: black;"> Log In</a></li>
+                    <li id="nav"><a href="http://127.0.0.1:5000/contactenos" id="textoNav" style="text-decoration: none; color: black;"> Contáctenos</a> </li>
                 </ul>
             </nav>
         </div>
@@ -49,7 +49,7 @@
          border-top: black solid 3px; border-bottom: black solid 3px;">
             <h2 style="font-family: 'Roboto Mono';">Administrativo de Salud</h2> 
             <p><label for=""></label></p>
-            <a href="inicio.html" class="btn btn-danger btn-block col-md-2 mb-4" style="font-size: 1.5vw;" tabindex="5">Desconectar</a>
+            <a href="http://127.0.0.1:5000/inicio.html" class="btn btn-danger btn-block col-md-2 mb-4" style="font-size: 1.5vw;" tabindex="5">Desconectar</a>
         </div>
 
         <div style="display: flex; flex-direction: row;">
@@ -58,8 +58,8 @@
                  display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <h2 style="font-family: 'Roboto Mono';"> Servicios Disponibles</h2>
                     <br>
-                    <a href="personalRegistro.html" class="btn btn-light btn-block col-md-2 mb-4" style="width: 100%; font-size: 1.5vw;" tabindex="5">Registro de usuario nuevos</a>
-                    <a href="registroVacuVisual.html" class="btn btn-light btn-block col-md-2 mb-4" style="width: 100%; font-size: 1.5vw;" tabindex="5">Resgistro de vacunación</a>
+                    <a href="http://127.0.0.1:5000/personalRegistro" class="btn btn-light btn-block col-md-2 mb-4" style="width: 100%; font-size: 1.5vw;" tabindex="5">Registro de usuario nuevos</a>
+                    <a href="http://127.0.0.1:5000/registroVacuVisual" class="btn btn-light btn-block col-md-2 mb-4" style="width: 100%; font-size: 1.5vw;" tabindex="5">Resgistro de vacunación</a>
                     
                 </div>
             </div>
@@ -67,104 +67,63 @@
             <div style="border-left: black solid 3px; padding: 1.5%; width: 75%; background-color: #FFE599;">
                 <div style="background-color: #679ece; border-radius: 20px; padding: 1.5%;">
                     <h2 style="font-family: 'Roboto Mono';">Visualización de horarios por turno según fecha</h2>
-                    <form id="save_user_club">
-        
-                        <div class="mt-3">
-                            <label for="" class="form-label">DNI<label class="text-danger">*</label></label>
-                            <input id="dni" name="dni" type="text" class="form-control" tabindex="1"required>
+                    <form action="/guardar_usuario" method="POST">
+                        <label for="id_user">ID:</label>
+                        <input type="text" id="id_user" name="id_user" value="{{ next_id }}" readonly><br><br>
+                        <div class="form-group">
+                          <label for="dni">DNI:</label>
+                          <input type="text" class="form-control" id="dni" name="dni" required>
                         </div>
-        
-                        <div class="mt-3">
-                            <label for="" class="form-label">Primer Nombre<label class="text-danger">*</label></label>
-                            <input id="firstName" name="firstName" type="text" class="form-control" tabindex="2" required>
+                        <div class="form-group">
+                          <label for="firstName">First Name:</label>
+                          <input type="text" class="form-control" id="firstName" name="firstName" required>
                         </div>
-        
-                        <div class="mt-3">
-                            <label for="" class="form-label">Segundo Nombre<label class="text-danger">*</label></label>
-                            <input id="secondName" name="secondName" type="text" class="form-control" tabindex="3"  required>
+                        <div class="form-group">
+                          <label for="secondName">Second Name:</label>
+                          <input type="text" class="form-control" id="secondName" name="secondName">
                         </div>
-        
-                        <div class="mt-3">
-                            <label for="" class="form-label">Primer Nombre<label class="text-danger">*</label></label>
-                            <input id="firstLastName" name="firstLastName" type="text" class="form-control" tabindex="4"required>
+                        <div class="form-group">
+                          <label for="firstLastName">First Last Name:</label>
+                          <input type="text" class="form-control" id="firstLastName" name="firstLastName" required>
                         </div>
-        
-                        <div class="mt-3">
-                            <label for="" class="form-label">Segundo Apellido<label class="text-danger">*</label></label>
-                            <input id="secondLastName" name="secondLastName" type="text" class="form-control" tabindex="5" required>
+                        <div class="form-group">
+                          <label for="secondLastName">Second Last Name:</label>
+                          <input type="text" class="form-control" id="secondLastName" name="secondLastName" required>
                         </div>
-        
-                        <div class="mt-3">
-                            <label for="" class="form-label">Genero<label class="text-danger">*</label></label>
-                            <select class="form-select" id="genero" name="genero" type="number" required>
-                                <option value="">Selccionar genero</option>
-                                <option value="0">Masculino</option>
-                                <option value="1">Femenino</option>
-                        
-                            </select>
+                        <div class="form-group">
+                          <label for="genero">Género:</label>
+                          <select class="form-control" id="genero" name="genero" required>
+                            <option value="1">Masculino</option>
+                            <option value="0">Femenino</option>
+                          </select>
                         </div>
-        
-                        <div class="mt-3">
-                            <label class="form-label" for="">Correo<label class="text-danger">*</label></label>
-                            <input type="email" id="mail" name="mail" class="form-control" required>
+                        <div class="form-group">
+                          <label for="mail">Email:</label>
+                          <input type="email" class="form-control" id="mail" name="mail" required>
                         </div>
-        
-        
-                        <div class="mt-3">
-                            <label class="form-label" for="">Numero de telefono<label class="text-danger">*</label></label>
-                            <input type="text" id="phone" name="phone" class="form-control" required>
+                        <div class="form-group">
+                          <label for="phone">Phone:</label>
+                          <input type="tel" class="form-control" id="phone" name="phone" required>
                         </div>
-        
-                        <div class="mt-3">
-                            <label class="form-label" for="">Fecha de nacimiento<label class="text-danger">*</label></label>
-                            <input type="date" id="birthDate" name="birthDate" class="form-control" required>
+                        <div class="form-group">
+                          <label for="birthDate">Birth Date:</label>
+                          <input type="date" class="form-control" id="birthDate" name="birthDate" required>
                         </div>
-        
-    
-                        <div class="mt-3">
-                            <label for="" class="form-label">Tipo de Usuario<label class="text-danger">*</label></label>
-                            <select class="form-select" name="type_user" type="number" aria-label="seleccionar tipo de Usuario" required>
-                                <option value="">Selecciona tipo de usuario</option>
-                                <option value="1">Usuario regular</option>
-                                <option value="2">Enfermero</option>
-                                <option value="3">Personal de registro</option>
-                                <option value="4">Administrativo personal de salud</option>
-                            </select>
+                        <div class="form-group">
+                          <label for="password">Password:</label>
+                          <input type="password" class="form-control" id="password" name="password" required>
                         </div>
-
-
-                        <div class="mt-3">
-                            <label class="form-label" for="">Contraseña<label class="text-danger">*</label></label>
-                            <input type="text" id="password" name="password" class="form-control" required>
+                        <div class="form-group">
+                          <label for="id_Tipo">Tipo:</label>
+                          <select class="form-control" id="id_Tipo" name="id_Tipo" required>
+                            <option value="1">Paciente</option>
+                            <option value="2">Enfermero/a</option>
+                            <option value="3">Personal de registro</option>
+                            <option value="4">Administrativo de Salud</option>
+                          </select>
                         </div>
-        
-                        <div class="mt-3" style="display: flex; flex-direction: row; justify-content: center;">
-                            <a href="login.html" class="btn btn-secondary btn-block col-md-2 mb-4" tabindex="5">Cancelar</a>
-                            <button type="submit" class="btn btn-primary btn-block col-md-2 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Guardar</button>         
-                        
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Registro realizado</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Se ha registrado exitosamente, los procedimientos
-                                    necesarios para la activación de la cuenta serán enviados
-                                    al correo registrado u otorgados por las organizaciones
-                                    correspondientes en caso de validación de personal.
-                                    
-                                </div>
-                                <div class="modal-footer">
-                                <a href="inicio.html" class="btn btn-primary">Inicio</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </form>        
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                      </form>       
                 </div>
             </div> 
             
