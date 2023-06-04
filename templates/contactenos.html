@@ -45,8 +45,9 @@
     </header>
 
 
-    <main style="background: #B7CDE0; padding: 5% 10%; font-family: 'Roboto Mono';">
+    <main style="background-color: #B7CDE0; padding: 5% 10%; font-family: 'Roboto Mono';">
         <h1 class="title">CONTÁCTENOS</h1>
+        <br>
         <h2 class="duda">
             ¿Tienes alguna duda o sugerencia?
         </h2>
@@ -74,10 +75,10 @@
                     <input type="email" id="correo" name="ape" placeholder="ejemplo@gmail.com" class="form-control">
                 </div>
                 
-                <div class="pais">
-                    <label for="pais">País:</label>
-                    <select name="pais" id="Pais">
-                        <option value="s">Selecciona</option>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="Pais">País:</label>
+                    <select class="form-select" name="pais" id="Pais">
+                        <option selected value="s">Selecciona</option>
                         <option value="P">Perú</option>
                         <option value="A">Argentina</option>
                         <option value="E">Ecuador</option>
@@ -88,46 +89,68 @@
                         <option value="U">Uruguay</option>
                     </select>
                 </div>
-                </label>
-                <label for="telefono">Numero de telefono</label>
-                <input type="tel" id="telefono" placeholder="960224169">
+               
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="telefono">Numero de telefono</label>
+                    <input class="form-control" type="tel" id="telefono" placeholder="960224169">
+                </div>
+                
 
                 <br>
-                <fieldset class="consulta">
+                <fieldset>
                     <legend> ¿Cual es el motivo de consulta? </legend>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="op1" value="eventos" name="envio">
+                        <label class="form-check-label" for="op1">Proximos eventos</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="op2" value="info" name="envio">
+                        <label class="form-check-label" for="op2">Informacion extra</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="op3" value="errorInfo" name="envio">
+                        <label class="form-check-label" for="op3">Error de información</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="op4" value="difMot" name="envio">
+                        <label class="form-check-label" for="op4">Otro motivo</label>
+                    </div>
+                    <br>
+                    <label class="form-label" for="comentario">Deje su mensaje:</label>
+                    <div class="form-floating">
+                        <textarea name="|" class="form-control" placeholder="Escribe aquí tu duda o sugerencia o queja."></textarea>
+                    </div>
+                    <br>    
 
-                    <label for="op1">Proximos eventos</label>
-                    <input type="radio" id="op1" value="eventos" name="envio">
-                    <label for="op2">Informacion extra</label>
-                    <input type="radio" id="op2" value="info" name="envio">
-                    <label for="op3">Error de información</label>
-                    <input type="radio" id="op3" value="errorInfo" name="envio">
-                    <label for="op4">Otro motivo</label>
-                    <input type="radio" id="op4" value="difMot" name="envio">
-                    <label for="comentario">Deje su mensaje:</label>
-                    <textarea name="|" class="cons" placeholder="Escribe aquí tu duda o sugerencia o queja."></textarea>
-                    <input class="boton" type="reset" value="Cancelar">
-                    <input class="boton" type="submit" value="Enviar">
+                    <div>
+                        <input class="btn btn-danger btn-lg" type="reset" value="Cancelar">
+                        <input class="btn btn-primary btn-lg" type="submit" value="Enviar">
+                    </div>
+                    
+                    
                 </fieldset>
             </form>
         </section>
     </main>
 
-    <footer>
-        <div class="social-icon-container">
-            <a href="https://facebook.com/" class="social-icon"> <img src="imagenes/facebook.png" alt="facebook"></a>
-            <a href="https://instagram.com/" class="social-icon"> <img src="imagenes/instagram.png" alt="instagram"></a>
-            <a href="https://twitter.com/" class="social-icon"> <img src="imagenes/twitter.png" alt="twitter"></a>
-            <a href="https://youtube.com/" class="social-icon"> <img src="imagenes/youtube.png" alt="youtube"></a>
+    <footer style="background-color: black; display: flex; flex-direction: column;
+        justify-content: center; align-items: center; color: white">
+        <br>
+        <div style="display: flex; justify-content: space-around; height: 50px;">
+            <a href="https://facebook.com/" class="social-icon"> <img src="imagenes/facebook.png" alt="facebook" style="height: 75%;"></a>
+            <a href="https://instagram.com/" class="social-icon"> <img src="imagenes/instagram.png" alt="instagram" style="height: 100%;"></a>
+            <a href="https://twitter.com/" class="social-icon"> <img src="imagenes/twitter.png" alt="twitter" style="height: 100%;"></a>
+            <a href="https://youtube.com/" class="social-icon"> <img src="imagenes/youtube.png" alt="youtube" style="height: 100%;"></a>
         </div>
-        <ul class="footer-menu-container">
-            <li class="menu-item">Legal</li>
-            <li class="menu-item">Cookies</li>
-            <li class="menu-item">Privacy</li>
-            <li class="menu-item">Shipping</li>
-            <li class="menu-item">Refounds</li>
+        <ul style="list-style-type: none; text-align: center; font-family: 'Roboto Mono';">
+            <li style="margin-bottom: 2.5px;">Legal</li>
+            <li style="margin-bottom: 2.5px;">Cookies</li>
+            <li style="margin-bottom: 2.5px;">Privacy</li>
+            <li style="margin-bottom: 2.5px;">Shipping</li>
+            <li style="margin-bottom: 2.5px;">Refounds</li>
         </ul>
-        <span class="copyright">&copy;2021, ComunidadGamer. All rights reserved.</span>
+        <span style="margin-bottom: 10px;">&copy;2023, Centro Vacunatorio. All rights reserved.</span>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="fondo1" style="background-color: #FFE599;">
+<body style="background-color: #FFE599;">
     <header class="header" style="margin-left: 5%; margin-right: 5%;">
         <div class="respmenu" style="display: flex; flex-direction: row;
          height: 150px; justify-content: space-evenly; align-items: center;">
@@ -36,9 +36,9 @@
                  justify-content: space-evenly; align-items: center; 
                  flex-direction: row; flex-wrap: nowrap; font-size: 3vw;
                  font-family: 'Roboto Mono', cursive;">
-                    <li><a href="inicio.html" style="text-decoration: none; color: black;">Inicio</a></li>
-                    <li><a href="login.html" style="text-decoration: none; color: black;"> Log In</a></li>
-                    <li><a href="contactenos.html" style="text-decoration: none; color: black;"> Contáctenos</a> </li>
+                    <li id="nav"><a href="inicio.html" id="textoNav" style="text-decoration: none; color: black;">Inicio</a></li>
+                    <li id="nav"><a href="login.html" id="textoNav" style="text-decoration: none; color: black;"> Log In</a></li>
+                    <li id="nav"><a href="contactenos.html" id="textoNav" style="text-decoration: none; color: black;"> Contáctenos</a>
                 </ul>
             </nav>
         </div>
@@ -104,7 +104,8 @@
 
     <footer style="background-color: black; display: flex; flex-direction: column;
         justify-content: center; align-items: center; color: white">
-        <div style="display: flex; justify-content: space-around; height: 125px;">
+        <br>
+        <div style="display: flex; justify-content: space-around; height: 50px;">
             <a href="https://facebook.com/" class="social-icon"> <img src="imagenes/facebook.png" alt="facebook" style="height: 75%;"></a>
             <a href="https://instagram.com/" class="social-icon"> <img src="imagenes/instagram.png" alt="instagram" style="height: 100%;"></a>
             <a href="https://twitter.com/" class="social-icon"> <img src="imagenes/twitter.png" alt="twitter" style="height: 100%;"></a>
@@ -125,6 +126,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
+
+<style>
+    #nav:hover{
+        transform: scale(1.1);
+    }
+</style>
 
 </html>
 
